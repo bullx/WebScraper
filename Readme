@@ -1,0 +1,48 @@
+Libraries used:
+-Beautiful soup for parsing the HTML contents
+-NLTK for removing the stop words, punctuation marks and converting to lower case.
+
+Please download the BeautifulSoup and NLTK library before running the program.
+
+Working of System:
+1) Call the process method Used the BeautifulSoup library for python for parsing the HTML page
+2) After Parsing find all the tags with h1-h6 and paragraphs
+3) Convert the words to lowercase
+4) Remove the the punctuations using regex from NLTK tokenizer and tokenize the words
+5) Remove the stop words by using the nltk corpus for stop words
+6) Check if the words are from a paragraph else assign them a weight by multiplying by 5.
+   The content with headers are assigned more values and hence it will contain more information about the topic present
+   in the html page
+7) Store the words into a dictionary and their corresponding weights
+8) The printvalue method sorts the dictionary according to the highest values.
+   Now call the printvalue method to print the top 5 words from the html page.
+
+
+Steps to run:
+
+1)python solution.py
+2)Output
+
+Example 1)
+http://blog.rei.com/camp/how-to-introduce-your-indoorsy-friend-to-the-outdoors/
+Output :
+Top 5 elements found are
+friend
+keep
+like
+think
+lead
+
+Example 2)
+http://www.cnn.com/2013/06/10/politics/edward-snowden-profile/
+Output :
+Top 5 elements found are
+nsa
+watched
+must
+watch
+whistleblower
+
+3) Pass the link as text into Solution constructor which is in the main method for testing out with any other links
+   or modify link1 or link2 or link3
+
